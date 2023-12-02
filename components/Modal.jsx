@@ -26,6 +26,7 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
             );
           })}
         </div>
+        
         <div className="text-justify p-4">{details.description}</div>
         <div className="flex flex-col justify-center">
           <div className="flex flex-wrap mb-4 p-3 ">

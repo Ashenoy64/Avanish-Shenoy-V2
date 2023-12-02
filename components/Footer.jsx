@@ -15,28 +15,31 @@ export default function Footer (){
         </div>
         <nav className="flex flex-wrap justify-center w-full md:w-1/2 md:justify-end">
           <a
-            href="#home"
+            href="/#home"
             className="text-sm text-gray-300 hover:text-white mr-4"
           >
             Home
           </a>
           <a
-            href="#about"
-            className="text-sm text-gray-300 hover:text-white mr-4"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
+            href="/#projects"
             className="text-sm text-gray-300 hover:text-white mr-4"
           >
             Projects
           </a>
           <a
-            href="#contact"
+            href="/awards"
+            className="text-sm text-gray-300 hover:text-white mr-4"
+          >
+            Awards
+          </a>
+          <a
+            href="/contact"
             className="text-sm text-gray-300 hover:text-white mr-4"
           >
             Contact
+          </a>
+          <a href='/Avanish_Shenoy.pdf' target="__blank" className="text-sm text-gray-300 hover:text-white mr-4">
+            CV
           </a>
         </nav>
       </div>

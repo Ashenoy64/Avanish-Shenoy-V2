@@ -20,7 +20,7 @@ export default function Carousel() {
   
 
   return (
-    <section>
+    <section id="projects">
       <div className="carousel carousel-center rounded-box">
         {_data.map((object, index) => {
           return (

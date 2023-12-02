@@ -22,8 +22,7 @@ export default class Resources extends EventEmitter
         this.startLoading()
         setTimeout((e)=>{
             e.finished()
-
-        },2000,this)
+        },1000,this)
     }
 
     setLoaders()

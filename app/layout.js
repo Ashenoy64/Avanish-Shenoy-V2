@@ -14,15 +14,18 @@ const metadata = {
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
+  const [threeState,setThreeState] = useState(undefined)
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    if (canvasRef.current) {
+    if (canvasRef.current && !threeState) {
       const experience = new Experience(canvasRef.current, true);
+      setThreeState(experience)
       experience.resources.on('ready', () => {
         setLoading(false);
       });
     }
+    
   }, []);
 
   return (

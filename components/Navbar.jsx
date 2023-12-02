@@ -20,80 +20,89 @@ const Navbar = () => {
           <a href="#projects" className="animate-glow">
             Projects
           </a>
-          <a href="#certificates" className="animate-glow">
-            Certificates
+          <a href="/awards" className="animate-glow">
+            Awards
           </a>
-          <a href="#contacts" className="animate-glow">
+          <a href="/contact" className="animate-glow">
             Contacts
           </a>
-          <a href='/Avanish_Shenoy.pdf' target="__blank" className="animate-glow">
+          <a
+            href="/Avanish_Shenoy.pdf"
+            target="__blank"
+            className="animate-glow"
+          >
             CV
           </a>
         </div>
 
         <div className="md:hidden">
-          <button
-            className="text-white focus:outline-none"
-            onClick={toggleMobileMenu}
-          >
-            {isMobileMenuOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            )}
-          </button>
+          <details className="dropdown">
+            <summary className="bg-black btn" onClick={()=>{toggleMobileMenu()}}>
+              {isMobileMenuOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+              )}
+            </summary>
+            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 relative right-10">
+              <li>
+                <a href="/#home" className="animate-glow">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="animate-glow">
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="/awards" className="animate-glow">
+                  Awards
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="animate-glow">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/Avanish_Shenoy.pdf"
+                  target="__blank"
+                  className="animate-glow"
+                >
+                  CV
+                </a>
+              </li>
+            </ul>
+          </details>
         </div>
-
-        {isMobileMenuOpen && (
-          <div
-            className="md:hidden absolute top-16 right-0 left-0 z-10"
-            style={{ backgroundColor: "black" }}
-          >
-            <div className="flex flex-col items-center py-4">
-              <a href="#home" className="animate-glow">
-                Home
-              </a>
-              <a href="#about" className="animate-glow">
-                About Me
-              </a>
-              <a href="#contacts" className="animate-glow">
-                Contacts
-              </a>
-              <a href="#projects" className="animate-glow">
-                Projects
-              </a>
-              <a href="#certificates" className="animate-glow">
-                Certificates
-              </a>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
