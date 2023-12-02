@@ -1,0 +1,25 @@
+.hero-container {
+    text-align: center;
+    padding: 50px;
+    border-radius: 8px;
+  }
+  
+  .text-blue-500 {
+    color: #3b82f6;
+  }
+  
+  .text-gray-600 {
+    color: #6b7280;
+  }
+  
+  .cursor {
+    display: inline-block;
+    animation: blink-animation 0.7s infinite;
+  }
+  
+  @keyframes blink-animation {
+    50% {
+      opacity: 0;
+    }
+  }
+  
