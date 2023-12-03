@@ -17,7 +17,10 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex space-x-6">
-          <a href="#projects" className="animate-glow">
+        <a href="/#home" className="animate-glow">
+            Home
+          </a>
+          <a href="/#projects" className="animate-glow">
             Projects
           </a>
           <a href="/awards" className="animate-glow">
