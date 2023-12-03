@@ -13,7 +13,6 @@ export async function POST(req){
 
 
   try {
-    console.log("Started")
     const resend =  new Resend(process.env.RESEND_KEY)
 
     await resend.emails.send({
@@ -22,7 +21,6 @@ export async function POST(req){
       subject:subject,
       html:emailBody
     })
-    console.log("Sucess")
     return NextResponse.json({ message: 'Email sent successfully!' },{status:200})
   } catch (error) {
     console.log(error)

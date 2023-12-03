@@ -56,7 +56,7 @@ export default function ContactPage() {
       {notificationState != 0 && (
         <div className="toast toast-start z-10">
           {(notificationState == 1 && (
-            <div className="alert alert-info">
+            <div className="alert alert-info flex flex-row">
               <div
                 className="radial-progress  bg-info h-6 w-6"
                 style={{ "--value": progress,"--thickness":'1px' }}
@@ -80,7 +80,7 @@ export default function ContactPage() {
             </div>
           )) ||
             (notificationState == 2 && (
-              <div className="alert alert-error">
+              <div className="alert alert-error flex flex-row">
                 <div
                 className="radial-progress  bg-error h-6 w-6"
                 style={{ "--value": progress,"--thickness":'1px' }}
