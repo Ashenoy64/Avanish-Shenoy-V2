@@ -29,8 +29,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <title>{_data.title}</title>
-        <meta name="description" content={_data.description} />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="description" content={_data.description} />
       </Head>
       <body className='no-scrollbar h-screen w-full '>
         <canvas ref={canvasRef} className="webgl"></canvas>
