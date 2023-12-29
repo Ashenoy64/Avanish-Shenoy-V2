@@ -7,7 +7,8 @@ import {ProjectViewer} from "@/components/Modal";
 
 export default function Carousel() {
   const [modelState,changeState] =  useState(null)
-
+  const [imageNumber,setImageNumber] = useState(1)
+  const numberOfImages = _data.length
   const closeModal=()=>{
     changeState(null)
   }
@@ -17,7 +18,6 @@ export default function Carousel() {
     
   }
 
-  
 
   return (
     <section id="projects">
@@ -26,7 +26,7 @@ export default function Carousel() {
           return (
             <ProjectCard
               key={index}
-              style="mx-4 carousel-item"
+              style={`mx-4 carousel-item ${"slide"+index}`}
               project = {object}
               click = {handleButtonClick}
             />

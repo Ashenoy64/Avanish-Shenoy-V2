@@ -30,8 +30,8 @@ export default function Page() {
   return (
     <section className="flex flex-col justify-start h-full object-contain">
       <div className="flex flex-row justify-between w-full ">
-        <button className={`w-1/2 text-center btn rounded-none rounded-l-md ${page==0?"bg-white text-black":""}`} onClick={()=>setPage(0)}>Certificates</button>
-        <button className={`w-1/2 text-center btn rounded-none rounded-r-md ${page==1?"bg-white text-black":""}`} onClick={()=>setPage(1)}>Badges</button>
+        <button className={`w-1/2 text-center btn bg-gray-900 rounded-none rounded-l-md text-primary hover:bg-400 ${page==0?"bg-gray-700 ":""}`} onClick={()=>setPage(0)}>Certificates</button>
+        <button className={`w-1/2 text-center btn bg-gray-900 rounded-none rounded-r-md hover:bg-400 text-primary  ${page==1?"bg-gray-700 ":""}`} onClick={()=>setPage(1)}>Badges</button>
       </div>
 
       

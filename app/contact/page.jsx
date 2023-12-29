@@ -179,7 +179,7 @@ export default function ContactPage() {
               "Send Message"
             ) : (
               <span
-                className={`loading  loading-infinity loading-lg text-warning`}
+                className={`loading  loading-infinity loading-lg text-primary`}
               ></span>
             )}
           </button>

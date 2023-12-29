@@ -44,7 +44,7 @@ const Hero = () => {
 
   return (
     <section className="hero-container bg-transparent flex-col" id="home">
-      <h1 className="text-4xl md:text-7xl font-bold text-blue-500">
+      <h1 className="text-4xl md:text-7xl font-bold text-blue-500 font-JBMono">
         {visibleText}
         <span className="cursor">&#x2588;</span>
       </h1>

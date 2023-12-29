@@ -15,6 +15,11 @@
   }
 }
 
+@font-face {
+  font-family:"JBMono";
+  src: url("../public//assets/fonts/JetBrainsMono-2.304/fonts/variable/JetBrainsMono[wght].ttf");
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
