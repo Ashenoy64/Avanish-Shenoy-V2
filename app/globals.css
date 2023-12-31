@@ -3,70 +3,70 @@
 @tailwind utilities;
 
 @layer utilities {
-  @variants responsive {
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+    @variants responsive {
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+  
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
     }
   }
-}
-
-@font-face {
-  font-family:"JBMono";
-  src: url("../public//assets/fonts/JetBrainsMono-2.304/fonts/variable/JetBrainsMono[wght].ttf");
-}
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  
+  @font-face {
+    font-family:"JBMono";
+    src: url("../public//assets/fonts/JetBrainsMono-2.304/fonts/variable/JetBrainsMono[wght].ttf");
   }
-} */
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    -ms-overflow-style: none;
-  scrollbar-width: none;
-  scroll-snap-type: y mandatory;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-
-.webgl {
-  position: fixed;
-  top: 0;
-  left: 0;
-  outline: none;
-  z-index: -1;
-}
-
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  height: 100vh;
-  padding-left: 10%;
-  padding-right: 10%;
-  scroll-snap-align: start;
-}
+  
+  /* :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  } */
+  
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+      -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  
+  .webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: -1;
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    scroll-snap-align: start;
+  }

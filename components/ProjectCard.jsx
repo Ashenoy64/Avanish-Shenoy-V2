@@ -26,7 +26,7 @@ export default function ProjectCard({ project,style,click }) {
   
 
   return (
-      <div className={` flex flex-col bg-gray-800 text-white shadow-lg rounded-lg w-72 overflow-hidden ${style}`} onClick={(e)=>click(e,project)}>
+      <div className={` flex flex-col bg-gray-800 text-white shadow-lg rounded-lg w-72 h-96 overflow-hidden ${style}`} onClick={(e)=>click(e,project)}>
         <div className="w-full  object-contain">
           <img src={imgSrc} alt={project.title} className="h-44 w-72"  />
         </div>

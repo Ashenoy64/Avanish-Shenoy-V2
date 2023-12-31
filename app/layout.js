@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="description" content={_data.description} />
       </Head>
-      <body className='no-scrollbar h-screen w-full '>
+      <body className='no-scrollbar h-screen w-full font-JBMono'>
         <canvas ref={canvasRef} className="webgl"></canvas>
         {
           loading ? <Preloader /> : (
