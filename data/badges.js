@@ -88,43 +88,43 @@ const BadgeData =  [
         title:"Leetcode July 2023  Challenge",
     },{
         url:'/Badges/lc8.png',
-        title:"Leetcode 100 Days Streak",
+        title:"Leetcode 100 Days ",
     },{
         url:'/Badges/u1.png',
-        title:"Unity Sound",
+        title:"Unity Events and Interactions",
     },{
         url:'/Badges/u2.png',
-        title:"Unity Locomotion",
+        title:"Unity VR basics",
     },{
         url:'/Badges/u3.png',
-        title:"Unity AR ",
+        title:"Unity Get Started with AR ",
     },{
         url:'/Badges/u4.png',
-        title:"Unity Scripts",
+        title:"Unity Create with Code 1",
     },{
         url:'/Badges/u5.png',
         title:"Unity Junior Programmer",
     },{
         url:'/Badges/u6.png',
-        title:"Unity ...",
+        title:"Unity Managing Scene Flow",
     },{
         url:'/Badges/u7.png',
-        title:"Unity ...",
+        title:"Unity Create with Code 2",
     },{
         url:'/Badges/u8.png',
-        title:"Unity ...",
+        title:"Unity Create with Code 3",
     },{
         url:'/Badges/u9.png',
-        title:"Unity ...",
+        title:"Unity Basics",
     },{
         url:'/Badges/u10.png',
         title:"Unity Essentials",
     },{
         url:'/Badges/u11.png',
-        title:"Unity ...",
+        title:"Unity Exploration",
     },{
         url:'/Badges/u12.png',
-        title:"Unity ...",
+        title:"Unity Getting Started",
     },
 
 ]
