@@ -3,7 +3,7 @@ import _data from "@/data/about";
 import { useState } from "react";
 
 export default function AboutMe() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
 
   const handleButtonClick = (k) => {
     if(active == k)
@@ -14,28 +14,31 @@ export default function AboutMe() {
     setActive(k);
   };
   return (
+    <section className="w-full mx-auto flex flex-row justify-center ">
     <div
-      className="flex flex-col min-h-screen backdrop-blur-xl gap-2 p-4  text-white"
+      className="grid grid-cols-2 md:grid-cols-4 gap-4   w-full backdrop-blur-xl p-4  text-white"
       id="#about"
     >
       {_data.map((object, index) => (
-        <div className={`collapse outline-1 outline container ${active==index? "collapse-open":"collapse-close"} `} key={index}>
+        <div className={`collapse outline-1 outline container ${active==index? "collapse-open absolute bg-black z-10 mx-auto  w-full h-64 ":"collapse-close  "} `} key={index}>
           <input
             type="radio"
             name="my-accordion-1"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation()
               handleButtonClick(index);
             }}
           />
-          <div className="collapse-title text-xl font-bold mb-4 text-blue-400  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <div className={`collapse-title text-md md:text-xl font-bold mb-4 text-blue-400  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ${active==index? "block":"block"}`}>
             {object.title}
           </div>
-          <div className="collapse-content">
+          <div className={`collapse-content ${active==index? "block":" hidden"}`}>
             {object.description}
         </div>
         </div>
       ))}
     </div>
+    </section>
   );
 }
 
