@@ -45,6 +45,7 @@ export default function ContactPage() {
       emailjs.send(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,emailBody,process.env.NEXT_PUBLIC_EMAIL_JS) 
       .then((response) => {
         handleNotification(1);
+        setLoading(false);
         setFormData({ name: "", email: "", subject: "", message: "" })
       }, (error) => {
         setLoading(false);
