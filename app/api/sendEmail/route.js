@@ -1,55 +1,22 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import emailjs from '@emailjs/browser'
 
 export async function POST(req){
   const { name, email, subject, message } = await req.json();
 
-  const emailBody = `
-  Name  :${name}
-  Email :${email}
-  ---------------------------------------
-  ${message}
-  `
+  const emailBody = {
+    from_name:name,
+    subject_sub:subject,
+    to_name:"Avanish",
+    message:message,
+    from_email:email,
+  }
 
   try {
-    // const resend =  new Resend(process.env.RESEND_KEY)
 
-    // await resend.emails.send({
-    //   from:process.env.RESEND_DOMAIN,
-    //   to:process.env.EMAIL,
-    //   subject:subject,
-    //   html:emailBody
-    // })
-
-    let nodemailer = require('nodemailer')
-
-    const transporter = nodemailer.createTransport({
-      port: 465,
-      host: "smtp.gmail.com",
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD,
-      },
-      secure: true,
-    })
-
-    const mailData = {
-      from: process.env.EMAIL,
-      to:process.env.MAIN_EMAIL,
-      subject: `Message From ${name} ${subject} `,
-      text: message + " | Sent from: " + email,
-      html: emailBody
-     }
-
-     transporter.sendMail(mailData, function (err, info) {
-      if(err){
-        console.log(err)
-        throw(err)
-      }
-      else
-        console.log(info)
-    })
-
+    const response = await emailjs.send(process.env.EMAIL_JS_SERVICE_ID,process.env.EMAIL_JS_TEMPLATE_ID,emailBody,process.env.NEXT_PUBLIC_EMAIL_JS)
+    
+    console.log(response.text)
     return NextResponse.json({ message: 'Email sent successfully!' },{status:200})
   } catch (error) {
     console.log(error)

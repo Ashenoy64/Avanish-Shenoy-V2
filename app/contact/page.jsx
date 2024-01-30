@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import emailjs from "@emailjs/browser"
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
 
@@ -23,28 +25,32 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    try {
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    // try {
+    //   const response = await fetch("/api/sendEmail", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(formData),
+    //   });
 
-      if (response.ok) {
-        handleNotification(1);
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        handleNotification(2);
-        console.log(error)
-      }
-    } catch (error) {
-      console.log(error)
-      handleNotification(2);
-    } finally {
-      setLoading(false);
+    const emailBody = {
+      from_name:formData.name,
+      subject_sub:formData.subject,
+      to_name:"Avanish",
+      message:formData.message,
+      from_email:formData.email,
     }
+
+      emailjs.send(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,emailBody,process.env.NEXT_PUBLIC_EMAIL_JS) 
+      .then((response) => {
+        handleNotification(1);
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      }, (error) => {
+        setLoading(false);
+        handleNotification(2);
+      })
+      
   };
 
   const handleChange = (e) => {

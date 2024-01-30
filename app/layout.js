@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <html lang="en">
+    <html lang="en" className='no-scrollbar'>
       <Head>
         <title>{_data.title}</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
