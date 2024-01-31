@@ -7,7 +7,7 @@ import BadgesData  from "@/data/badges";
 import CertificateData  from "@/data/certificate" ;
 
 const MAX_BADGES_PAGE = 4
-const MAX_CERT_PAGE = window.screen.width > 480 ? 2 : 1;
+const MAX_CERT_PAGE = 2//window.screen.width > 480 ? 2 : 1;
 
 export default function Page() {
   const [page,setPage] = useState(0);
