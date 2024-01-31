@@ -16,11 +16,11 @@ export default function AboutMe() {
   return (
     <section className="w-full p-2 flex flex-row justify-center ">
     <div
-      className="md:w-full h-full  flex md:flex-row flex-col justify-between  "
+      className="md:w-full h-full  flex sm:flex-row flex-col justify-between  "
       id="#about" >
       {
         _data.map((object,index)=>(
-          <div key={index} className="w-full  h-32 hover:h-1/2 flex flex-col gap-2 p-2 hover:-translate-y-1/4 justify-center  rounded-sm    items-center group">
+          <div key={index} className=" transition ease-in  w-full  h-32 hover:h-1/2 flex flex-col gap-2 p-2 hover:-translate-y-1/4 justify-center  rounded-sm    items-center group">
               <div className="object-contain w-32 h-32 mx-auto "> 
                 <img src={object.url}  className=""/>
               </div>
