@@ -1,9 +1,9 @@
 import * as THREE from 'three'
 import Resources from "./utils/Resource"
-import vertexShader from './Shaders/vertexShader'
-import fragmentShader from './Shaders/fragmentShader'
-
-
+import vertexShader from './Shaders/Particles/vertexShader'
+import fragmentShader from './Shaders/Particles/fragmentShader'
+import vertexShaderStars from './Shaders/Stars/vertextShader'
+import fragmentShaderStars from './Shaders/Stars/fragmentShader'
 
 let instance = null
 
@@ -211,29 +211,56 @@ export default class Experience {
 
     
 
-    createStar = (geometry, material) => {
 
-        const star = new THREE.Mesh(geometry, material,);
-
-        star.position.set(
-            (Math.random() - 0.5) * 20,
-            (Math.random() - 0.5) * 12,
-            (Math.random() - 0.5) * 5
-        );
-
-        return star;
-    }
 
     createStarGroup = () => {
-        const geometry = new THREE.SphereGeometry(0.01);
-        const material = new THREE.MeshBasicMaterial({ color: 0xffffff, depthWrite: true });
-        const starGroup = new THREE.Group();
-        for (let i = 0; i < 300; i++) {
-            const star = this.createStar(geometry, material);
-            starGroup.add(star);
+        // const geometry = new THREE.SphereGeometry(0.01);
+        // const material = new THREE.MeshBasicMaterial({ color: 0xffffff, depthWrite: true });
+        // const starGroup = new THREE.Group();
+        // for (let i = 0; i < 300; i++) {
+        //     const star = this.createStar(geometry, material);
+        //     starGroup.add(star);
+        // }
+        // this.scene.add(starGroup)
+
+
+
+        const count = 1500
+        this.starsMesh= new THREE.BufferGeometry()
+
+        const positions = new Float32Array(count * 3)
+
+        for (let i = 0; i < count; i++) {
+           
+            positions[i] = (Math.random() - 0.5 )* 22
+            positions[i + 1] = (Math.random() - 0.5) * 15
+            positions[i + 2] = (Math.random() - 0.5) * 5
+
         }
-        this.scene.add(starGroup)
+
+        this.starsMesh.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+    
+
+        this.starsMaterial = new THREE.ShaderMaterial({
+
+            depthWrite: false,
+            blending: THREE.AdditiveBlending,
+            vertexColors: true,
+            vertexShader: vertexShaderStars,
+            fragmentShader: fragmentShaderStars,
+            transparent:true,
+            uniforms:{
+                uSize : {value : 10 *this.renderer.getPixelRatio()},
+            }
+        })
+
+        this.stars= new THREE.Points(this.starsMesh, this.starsMaterial)
+        this.group.add(this.stars)
     }
+
+
+    
+
 
 
 
