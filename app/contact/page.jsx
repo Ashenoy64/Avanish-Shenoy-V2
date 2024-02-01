@@ -1,16 +1,25 @@
 "use client";
-import { useState } from "react";
-import emailjs from "@emailjs/browser"
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import Captcha from "react-google-recaptcha";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const recaptchaRef = useRef();
 
   const [loading, setLoading] = useState(false);
   const [notificationState, setNotifyState] = useState(0);
+  const [notification, setNotifyText] = useState(0);
   const [progress, setProgress] = useState(100);
 
-  const handleNotification = (state) => {
+  const handleNotification = (state, text) => {
     setNotifyState(state);
+    setNotifyText(text);
     setProgress(100);
     const interval = setInterval(() => {
       setProgress((prevProgress) => prevProgress - 1);
@@ -25,33 +34,48 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    // try {
-    //   const response = await fetch("/api/sendEmail", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(formData),
-    //   });
 
-    const emailBody = {
-      from_name:formData.name,
-      subject_sub:formData.subject,
-      to_name:"Avanish",
-      message:formData.message,
-      from_email:formData.email,
+    const recaptchaResponse = await recaptchaRef.current?.executeAsync();
+    recaptchaRef.current.reset();
+
+    const response = await fetch("/api/validatePathToken", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ recaptchaResponse }),
+    });
+
+    if (response.ok) {
+      const emailBody = {
+        from_name: formData.name,
+        subject_sub: formData.subject,
+        to_name: "Avanish",
+        message: formData.message,
+        from_email: formData.email,
+      };
+
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
+          emailBody,
+          process.env.NEXT_PUBLIC_EMAIL_JS
+        )
+        .then(
+          (response) => {
+            handleNotification(1, "Mail has been sent");
+            setLoading(false);
+            setFormData({ name: "", email: "", subject: "", message: "" });
+          },
+          (error) => {
+            setLoading(false);
+            handleNotification(2, "Failed to send mail");
+          }
+        );
+    } else {
+      handleNotification(2, "Captcha failed");
     }
-
-      emailjs.send(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,emailBody,process.env.NEXT_PUBLIC_EMAIL_JS) 
-      .then((response) => {
-        handleNotification(1);
-        setLoading(false);
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      }, (error) => {
-        setLoading(false);
-        handleNotification(2);
-      })
-      
   };
 
   const handleChange = (e) => {
@@ -59,14 +83,14 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="flex justify-center items-center h-screen ">
+    <section className="flex justify-center items-center h-screen  my-6">
       {notificationState != 0 && (
         <div className="toast toast-start z-10">
           {(notificationState == 1 && (
             <div className="alert alert-info flex flex-row">
               <div
                 className="radial-progress  bg-info h-6 w-6"
-                style={{ "--value": progress,"--thickness":'1px' }}
+                style={{ "--value": progress, "--thickness": "1px" }}
                 role="progressbar"
               >
                 <svg
@@ -83,32 +107,31 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <span>Mail sent.</span>
+              <span>{notification}</span>
             </div>
           )) ||
             (notificationState == 2 && (
               <div className="alert alert-error flex flex-row">
                 <div
-                className="radial-progress  bg-error h-6 w-6"
-                style={{ "--value": progress,"--thickness":'1px' }}
-                role="progressbar"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="stroke-current shrink-0 h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
+                  className="radial-progress  bg-error h-6 w-6"
+                  style={{ "--value": progress, "--thickness": "1px" }}
+                  role="progressbar"
                 >
-                  
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="stroke-current shrink-0 h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
                 </div>
-                <span>Failed to send mail.</span>
+                <span>{notification}</span>
               </div>
             ))}
         </div>
@@ -177,6 +200,9 @@ export default function ContactPage() {
               required
             ></textarea>
           </div>
+          <div className="hidden">
+          <Captcha  ref={recaptchaRef} size="invisible" sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}/>
+          </div>
           <button
             type="submit"
             className="btn btn-primary w-full max-w-md outline"
@@ -190,6 +216,7 @@ export default function ContactPage() {
               ></span>
             )}
           </button>
+          
         </form>
       </div>
     </section>
