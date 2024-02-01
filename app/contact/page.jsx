@@ -67,12 +67,11 @@ export default function ContactPage() {
             handleNotification(1, "Mail has been sent");
             setLoading(false);
             setFormData({ name: "", email: "", subject: "", message: "" });
-          },
+          }).catch(
           (error) => {
             setLoading(false);
             handleNotification(2, "Failed to send mail");
-          }
-        );
+          })
     } else {
       handleNotification(2, "Captcha failed");
     }
