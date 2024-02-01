@@ -8,6 +8,7 @@ import Preloader from '@/components/Preloader';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import _data  from '@/data/metadata';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
               <Navbar />
               {children}
               <Analytics/>
+              <SpeedInsights/>
               <Footer />
             </>
           )
