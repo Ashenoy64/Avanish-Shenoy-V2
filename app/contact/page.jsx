@@ -14,7 +14,7 @@ export default function ContactPage() {
 
   const [loading, setLoading] = useState(false);
   const [notificationState, setNotifyState] = useState(0);
-  const [notification, setNotifyText] = useState(0);
+  const [notification, setNotifyText] = useState("");
   const [progress, setProgress] = useState(100);
 
   const handleNotification = (state, text) => {
@@ -74,6 +74,7 @@ export default function ContactPage() {
           })
     } else {
       handleNotification(2, "Captcha failed");
+      setLoading(false)
     }
   };
 
@@ -138,7 +139,7 @@ export default function ContactPage() {
 
       <div className="backdrop-blur-md shadow-lg rounded-lg p-8 md:p-10 max-w-md w-full space-y-6">
         <h2 className="text-3xl font-bold text-white">Contact Me</h2>
-        <form className="space-y-4" onSubmit={handleSubmit}>
+        <form className="space-y-4 text-white" onSubmit={handleSubmit}>
           <div className="flex flex-col">
             <label htmlFor="name" className="text-gray-700 font-semibold">
               Name

@@ -7,8 +7,10 @@ import Experience from '@/THREE/Expirence';
 import Preloader from '@/components/Preloader';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import _data  from '@/data/metadata';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
+
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
@@ -29,9 +31,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className='no-scrollbar'>
       <Head>
-        <title>{_data.title}</title>
+        <title>Ashenoy</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="description" content={_data.description} />
+        <meta name="description" content="This is a personal website" />
       </Head>
       <body className='no-scrollbar h-screen w-full font-JBMono'>
         <canvas ref={canvasRef} className="webgl"></canvas>

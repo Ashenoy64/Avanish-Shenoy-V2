@@ -16,7 +16,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects">
+    <section id="projects" className=" ">
       <div className="carousel carousel-center rounded-box">
         {_data.map((object, index) => {
           return (

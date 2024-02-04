@@ -89,7 +89,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="#projects" className="animate-glow">
+                <a href="/#projects" className="animate-glow">
                   Projects
                 </a>
               </li>

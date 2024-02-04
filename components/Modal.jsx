@@ -16,18 +16,18 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
   useEffect(() => {}, []);
   return (
     <Modal>
-      <div className="card w-96 bg-gray-900  flex justify-center">
+      <div className="card w-96 overflow-auto no-scrollbar bg-gray-900  flex justify-center">
         <div className="carousel mx-auto rounded-t-md">
           {details.imageUrl.map((src, index) => {
             return (
-              <div key={index} className="carousel-item w-full object-contain">
-                <img src={src} alt="Project_Image" className="" />
+              <div key={index} className="carousel-item w-full object-contain mx-auto">
+                <img src={src} alt="Project_Image" className="w-full h-64" />
               </div>
             );
           })}
         </div>
         
-        <div className="text-justify p-4">{details.description}</div>
+        <div className="text-justify p-4 h-44 my-2  overflow-y-auto no-scrollbar">{details.description}</div>
         <div className="flex flex-col justify-center">
           <div className="flex flex-wrap mb-4 p-3 ">
             {details.fields.map((field) => (
@@ -39,7 +39,6 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
               </span>
             ))}
           </div>
-          <div></div>
         </div>
         <div className="flex flex-row justify-center p-2">
           <button
