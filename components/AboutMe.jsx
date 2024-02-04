@@ -1,7 +1,7 @@
 "use client";
 import _data from "@/data/about";
 import { useState } from "react";
-
+import Image from "next/image";
 export default function AboutMe() {
   const [active, setActive] = useState(-1);
 
@@ -20,9 +20,7 @@ export default function AboutMe() {
       {
         _data.map((object,index)=>(
           <div key={index} className={`transition ease-in  sm:w-3/4 w-full mx-auto my-12 md:mb-auto  h-32  flex flex-col gap-2 p-2  justify-center  rounded-lg    items-center group hover:backdrop-blur hover:-translate-y-1/4 hover:h-1/2 ${index==active && "backdrop-blur -translate-y-1/4 h-1/2"}`} onClick={()=>handleClick(index)}>
-              <div className="object-contain w-32 h-32 mx-auto "> 
-                <img src={object.url}  className=""/>
-              </div>
+              <Image src={object.url} alt="gif" width={128} height={128}  ></Image>
               <div className="  w-full text-white text-center">{object.title}</div>
               <div className={`md:h-2/3 bg-black w-full text-justify p-2  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600  group-hover:block ${index == active ? "block":"hidden"}`} >
                   {object.description}

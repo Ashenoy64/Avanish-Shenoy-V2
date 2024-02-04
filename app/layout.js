@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       });
     }
     
-  }, []);
+  }, [threeState,canvasRef]);
 
   return (
     <html lang="en" className='no-scrollbar'>

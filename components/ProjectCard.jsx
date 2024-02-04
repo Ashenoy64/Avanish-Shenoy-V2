@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-// import Image from "next/image";
+import Image from "next/image";
 
 export default function ProjectCard({ project,style,click }) {
   const [imgSrc,setSrc]=useState(project.imageUrl[0])
