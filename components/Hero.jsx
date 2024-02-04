@@ -9,35 +9,39 @@ const Hero = () => {
     greetings[Math.round(Math.random() * (greetings.length - 1))]
   );
   const [visibleText, setVisibleText] = useState("");
-
-  let charIndex = 0;
-
-  const typeNextChar = () => {
-    let text = currentGreeting.slice(0, charIndex);
-    setVisibleText(text);
-    charIndex++;
-
-    if (charIndex < currentGreeting.length) {
-
-      setTimeout(typeNextChar, 200); 
-
-    } else {
-
-      setVisibleText(currentGreeting);
-
-
-      setTimeout(() => {
-        setVisibleText("");
-        charIndex = 0;
-        setTimeout(() => {
-          setTimeout(typeNextChar, 1000);
-        }, 1500);
-      }, 3000);
-    
-    }
-  };
-
+  
+  
+  
   useEffect(() => {
+    let charIndex = 0;
+    const typeNextChar = () => {
+      let text = currentGreeting.slice(0, charIndex);
+      setVisibleText(text);
+      charIndex++;
+  
+      if (charIndex < currentGreeting.length) {
+  
+        setTimeout(typeNextChar, 200); 
+  
+      } else {
+  
+        setVisibleText(currentGreeting);
+  
+  
+        setTimeout(() => {
+          setVisibleText("");
+          charIndex = 0;
+          setTimeout(() => {
+            setTimeout(typeNextChar, 1000);
+          }, 1500);
+        }, 3000);
+      
+      }
+    };
+  
+
+
+
     const typeTimer = setTimeout(typeNextChar, 500); 
     return () => clearTimeout(typeTimer);
   },[]);
