@@ -56,10 +56,6 @@ const CertificateData =  [
         title:"Smagic Ideathon",
     },
     {
-        url:"/Certificates/cert15.png",
-        title:"Typing Beginner",
-    },
-    {
         url:"/Certificates/cert16.png",
         title:"Flipkart GRID Health Track",
     },
