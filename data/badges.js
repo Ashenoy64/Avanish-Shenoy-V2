@@ -12,11 +12,11 @@ const BadgeData =  [
     },
     {
         url:'/Badges/hf-3.png',
-        title:"Digital Ocean Hacktoberfest Participation",
+        title:"Digital Ocean  Participation",
     },
     {
         url:'/Badges/hf-4.png',
-        title:"Holopin Beginner",
+        title:"Holopin"
     }
     ,{
         url:'/Badges/hf-5.png',
@@ -43,49 +43,49 @@ const BadgeData =  [
         title:"Hacktoberfest First 50,000 PR",
     },{
         url:'/Badges/hk1.png',
-        title:"HackerRank Ruby Challenge",
+        title:"HackerRank Ruby ",
     },
     {
         url:'/Badges/hk2.png',
-        title:"HackerRank Problem Solving Challenge",
+        title:"HackerRank Problem Solving ",
     },{
         url:'/Badges/hk3.png',
-        title:"HackerRank C++ Challenge",
+        title:"HackerRank C++ ",
     },{
         url:'/Badges/hk4.png',
-        title:"HackerRank Python Challenge",
+        title:"HackerRank Python ",
     },{
         url:'/Badges/hk5.png',
-        title:"HackerRank C Challenge",
+        title:"HackerRank C ",
     },{
         url:'/Badges/hk6.png',
-        title:"HackerRank SQL Challenge",
+        title:"HackerRank SQL ",
     },
     {
         url:'/Badges/lc1.png',
-        title:"Leetcode Problem Solving Challenge",
+        title:"Leetcode Problem Solving ",
     },
     {
         url:'/Badges/lc2.png',
-        title:"Leetcode 50 Days Streak",
+        title:"Leetcode 50 Days ",
     },
     {
         url:'/Badges/lc3.png',
-        title:"Leetcode Data Structure Challenge",
+        title:"Leetcode Data Structure ",
     },
     {
         url:'/Badges/lc4.png',
-        title:"\Leetcode Algorithm Challenge",
+        title:"\Leetcode Algorithm ",
     },
     {
         url:'/Badges/lc5.png',
-        title:"Leetcode Interview 75 Challenge",
+        title:"Leetcode Interview 75 ",
     },{
         url:'/Badges/lc6.png',
-        title:"Leetcode Binary Search Challenge",
+        title:"Leetcode Binary Search ",
     },{
         url:'/Badges/lc7.png',
-        title:"Leetcode July 2023  Challenge",
+        title:"Leetcode July 2023  ",
     },{
         url:'/Badges/lc8.png',
         title:"Leetcode 100 Days ",
@@ -126,6 +126,26 @@ const BadgeData =  [
         url:'/Badges/u12.png',
         title:"Unity Getting Started",
     },
+    {
+        url:'/Badges/AWS_Compute.png',
+        title:"AWS Compute",
+    },
+    {
+        url:'/Badges/AWS_Database.png',
+        title:"AWS Database",
+    },
+    {
+        url:'/Badges/AWS_Serverless.png',
+        title:"AWS Serverless",
+    },{
+        url:'/Badges/AWS_Storage.png',
+        title:"AWS Storage",
+    },{
+        url:'/Badges/AWS_Networking.png',
+        title:"AWS Networking",
+    },
+
+
 
 ]
 
