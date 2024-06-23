@@ -97,8 +97,11 @@ const _data = [
       {
         imageUrl: ['/projects/EscapeQuest/Level2.png','/projects/EscapeQuest/Level2_1.png','/projects/EscapeQuest/Level1.png'],
         title: "Escape Quest:VR Game",
-        description: `.`,
-        githubLink: "https://github.com/Ashenoy64/Kannon-1000",
+        description: `EscapeQuest is an exciting VR project that immerses you in themed escape rooms. 
+        Experience the thrill of solving intricate puzzles and exploring detailed virtual environments.
+         Use your VR controllers to interact with objects, navigate the game world, and uncover clues with an intuitive in-VR user interface.
+         Dive into EscapeQuest for an unforgettable adventure full of challenges and fun!`,
+        githubLink: "https://github.com/Ashenoy64/EscapeQuest",
         fields: ["Unity","VR","Blender",'C#'], 
       }
     
