@@ -15,12 +15,10 @@ const _data =  [
         url:"/gifs/gamedev/gamedev_g.gif"
     },
     {
-        title:"Devops",
-        description:"Fascinated by DevOps and AI/ML. Excited by automation and\
-        machine learning to solve complex problems and optimize\
-        workflows. Eager to contribute to cutting-edge tech integration\
-        and dynamic problem-solving.",
-        url:"/gifs/devops/devops_g.gif"
+        title:"Systems",
+        description:`Fascinated by systems and automation, I thrive on solving complex problems and optimizing workflows.
+         With a strong foundation in system integration, I am eager to contribute to cutting-edge tech solutions and dynamic problem-solving.`,
+        url:"/gifs/systems/systems.gif"
     },
     {
         title:"Competitive Coding and Beyond",

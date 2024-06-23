@@ -1,14 +1,5 @@
 const _data = [
     {
-      imageUrl: ['/projects/9x9/home.png','/projects/9x9/result.png'],
-      title: "9x9 Tic Tac Toe",
-      description: `9x9 Tic Tac Toe is an engaging twist on the classic Tic Tac Toe game, 
-      played on a 9x9 grid comprising 9 smaller 3x3 Tic Tac Toe boards arranged in a 3x3 grid.
-      The objective is to win at least 5 of the smaller Tic Tac Toe boards to claim victory.`,
-      githubLink: "https://github.com/Ashenoy64/9x9-Tic-Tac-Toe",
-      fields: ["Python","kivy"],
-    },
-    {
       imageUrl: ['/projects/BankingSystem/Home.png','/projects/BankingSystem/Registration.png','/projects/BankingSystem/Transfer.png'],
       title: "Golden Horizon Bank",
       description: `Golden Horizon Bank (GHB) is a simple Banking System website developed with Django and Supabase as the database.
@@ -44,14 +35,6 @@ const _data = [
         fields: ["IOT","AI","RaspberryPI","Motor Driver"],
       },
       {
-        imageUrl: ['/projects/Sudoku/home.png','/projects/Sudoku/solved.png'],
-        title: "Sudoku",
-        description: `Sudoku Game is a Python project that presents an interactive Sudoku gaming experience through a graphical user interface built with Kivy.
-        Play Sudoku with varying difficulties - easy, medium, or hard, and challenge yourself to solve the puzzles.`,
-        githubLink: "https://github.com/project2",
-        fields: ["Python","Kivy"],
-      },
-      {
         imageUrl: ['/projects/IndustryRun/home.png','/projects/IndustryRun/play.png'],
         title: "Industry Run",
         description: `Industry Run is an exciting endless runner game developed using Unreal Engine 5.
@@ -76,6 +59,48 @@ const _data = [
         githubLink: "https://github.com/Ashenoy64/TrackIt",
         fields: ["MongoDB","React","Express","NodeJS"],
       },
+      {
+        imageUrl: ['/projects/CollabTE/Login.png','/projects/CollabTE/Dashboard.png','/projects/CollabTE/Offline.png','/projects/CollabTE/Online.png'],
+        title: "CollabTE",
+        description: `CollabTE is a collaborative text editor built using TipTap, offering a seamless platform for multiple users to collaboratively edit text files. 
+        The editor utilizes Firebase for basic file system functionality, enabling offline editing capabilities along with a room-based collaborative environment. 
+        Users can join specific rooms using unique IDs and collaboratively work on shared documents in real-time.`,
+        githubLink: "https://github.com/Ashenoy64/CollabTE",
+        fields: ["Nextjs","Tailwind","Firebase"],
+      },
+      {
+        imageUrl: ['/projects/HPMP/Login.png','/projects/HPMP/Home.png','/projects/HPMP/Playlist.png','/projects/HPMP/Search.png'],
+        title: "HPMP",
+        description: `HPMP is a music player application! This web application aims to provide you with a fast and enjoyable music listening experience.`,
+        githubLink: "https://github.com/Ashenoy64/HPMP",
+        fields: ["Vercel","Nextjs",'MongoDB','Mysql'],
+      },
+      {
+        imageUrl: ['/projects/Inventory/AdminDashboard.png','/projects/Inventory/AdminOrders.png','/projects/Inventory/AdminProducts.png','/projects/Inventory/Buy.png','/projects/Inventory/Cart.png','/projects/Inventory/NodeHealth.png','/projects/Inventory/OrderStatus.png'],
+        title: "Inventory Management System",
+        description: `The Inventory Management System is a comprehensive solution designed to streamline inventory operations,
+         order processing, and administrative tasks. Leveraging various technologies, including RabbitMQ for communication, Next.js for 
+         the user frontend, Streamlit for the admin console, and PostgreSQL for data storage, the system offers a robust platform for managing 
+         inventory efficiently.
+        `,
+        githubLink: "https://github.com/Ashenoy64/Inventory-Management-System",
+        fields: ["Docker","Rabbitmq","Postgres","Streamlit","Nextjs","Tailwind"],
+      },
+      {
+        imageUrl: ['/projects/Kannon/CreateTest.png','/projects/Kannon/NodeHealth.png','/projects/Kannon/TestView.png','/projects/Kannon/RealTimeTest.png','/projects/Kannon/TestSummary.png'],
+        title: "Kannon-1000:Distributed Load Testing System",
+        description: `Kannon-1000 is a distributed load testing system designed for scalability and real-time monitoring.
+         It allows users to perform tsunami and avalanche tests, view test statuses, and manage test creation through a Streamlit-powered interface.`,
+        githubLink: "https://github.com/Ashenoy64/Kannon-1000",
+        fields: ["Kafka","Streamlit","Python"],
+      },
+      {
+        imageUrl: ['/projects/EscapeQuest/Level2.png','/projects/EscapeQuest/Level2_1.png','/projects/EscapeQuest/Level1.png'],
+        title: "Escape Quest:VR Game",
+        description: `.`,
+        githubLink: "https://github.com/Ashenoy64/Kannon-1000",
+        fields: ["Unity","VR","Blender",'C#'], 
+      }
     
   ];
 

@@ -1,12 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import _data from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import { ProjectViewer } from "@/components/Modal";
 
-
+//660 ->1
+//1108 ->2
 export default function Projects() {
   const [modelState, changeState] = useState(null);
+  const [numProjects, setNumProjects] = useState(3);
+  const [projects,setProjects] = useState(null)
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      const _numProjects = window.innerWidth < 1000  ? 1 : window.innerWidth < 1300 ? 2 : 3; 
+      setNumProjects(_numProjects);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const closeModal = () => {
     changeState(null);
   };
@@ -15,19 +33,42 @@ export default function Projects() {
     changeState(project);
   };
 
-  return (
-    <section id="projects" className=" ">
-      <div className="carousel carousel-center rounded-box">
-        {_data.map((object, index) => {
-          return (
+  
+
+  useEffect(()=>{
+    const generateProjects = () => {
+      let genProjects = [];
+    
+      for (let i = 0; i < _data.length; i += numProjects) {
+        let projects = [];
+    
+        for (let j = 0; j < numProjects && i + j < _data.length; j++) {
+          projects.push(
             <ProjectCard
-              key={index}
-              style={`mx-4 carousel-item ${"slide" + index}`}
-              project={object}
+              key={i + j}
+              style={`mx-4 carousel-item ${"slide" + (i + j)}`}
+              project={_data[i + j]}
               click={handleButtonClick}
             />
           );
-        })}
+        }
+    
+        genProjects.push(
+          <div className="flex flex-row justify-evenly gap-12 my-4" key={i}>
+            {projects}
+          </div>
+        );
+      }
+      setProjects(genProjects)
+      return genProjects;
+    };
+    generateProjects()
+  },[numProjects])
+
+  return (
+    <section id="projects" className="  w-full mb-24">
+      <div className="carousel carousel-center carousel-vertical rounded-box md:h-64 h-56  p-2  my-auto w-full  ">
+        {projects}
       </div>
       {modelState && (
         <ProjectViewer
