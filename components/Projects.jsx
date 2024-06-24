@@ -67,7 +67,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="  w-full mb-24">
-      <div className="carousel carousel-center carousel-vertical rounded-box md:h-64 h-56  p-2  my-auto w-full  ">
+      <div className="carousel carousel-center carousel-vertical rounded-box md:h-2/3 h-full  p-2  my-auto w-full  ">
         {projects}
       </div>
       {modelState && (
