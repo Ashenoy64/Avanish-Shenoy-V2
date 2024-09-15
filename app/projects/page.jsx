@@ -20,7 +20,6 @@ export default function Projects() {
   const generateProjects = () => {
     let projects = []
     for(let i = 0; i < _data.length; ++i) {
-      if(_data[i].pinned == true)
         projects.push(
                 <ProjectCard
                   key={i}
@@ -32,16 +31,12 @@ export default function Projects() {
     }
     return projects;
   };
-  
-
-
 
   let projects = generateProjects()
 
-
   return (
-    <div id="projects" className="w-full h-full p-4 md:p-12 lg:p-32 my-32 ">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 w-full h-full my-24 ">
+    <div id="projects" className="w-full p-4 md:p-16 lg:p-44">
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  gap-8 w-full h-full my-24">
         {projects}
       </div>
       {modelState && (

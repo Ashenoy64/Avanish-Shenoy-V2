@@ -26,7 +26,7 @@ export default function ProjectCard({ project,style,click }) {
   
 
   return (
-      <div className={` flex flex-col bg-gray-800 hover:bg-gray-900 text-white shadow-lg rounded-lg w-full mx-auto md:w-96 md:h-64 h-56  overflow-hidden cursor-pointer ${style}`} onClick={(e)=>click(e,project)}>
+      <div className={` flex flex-col bg-gray-800 hover:bg-gray-900 text-white shadow-lg rounded-lg w-full mx-auto md:h-64 h-56  overflow-hidden cursor-pointer ${style}`} onClick={(e)=>click(e,project)}>
         <div className="flex flex-col justify-around h-full p-4">
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
           

@@ -23,7 +23,6 @@ const CertificateData =  [
         url:"/Certificates/cert24.jpg",
         title:"Spark Learning",
     },
-   
     {
         url:"/Certificates/cert7.png",
         title:"Coursera Linear Regression",
@@ -80,6 +79,14 @@ const CertificateData =  [
     {
         url:"/Certificates/cert21.png",
         title:"Google Code-In",
+    },
+    {
+        url:"/Certificates/ChatAutomation.png",
+        title:"Chatbot and Automation",
+    },
+    {
+        url:"/Certificates/LinuxEssentials.png",
+        title:"Linux Essentials",
     },
     {
         url:"/Certificates/cert22.png",
