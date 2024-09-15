@@ -144,7 +144,13 @@ const BadgeData =  [
         url:'/Badges/AWS_Networking.png',
         title:"AWS Networking",
     },
-
+    {
+        url:'/Badges/gcloud_app.png',
+        title:"Setting App Dev Env",
+    },{
+        url:'/Badges/gcloud_essentials.png',
+        title:"Cloud Essentials",
+    },
 
 
 ]
