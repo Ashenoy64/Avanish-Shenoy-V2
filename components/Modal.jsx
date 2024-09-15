@@ -54,7 +54,7 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
             </button>
           </div>
         </div>
-        <figure className="w-full flex flex-col h-full justify-center my-auto gap-2 items-center max-h-1/2">
+        {imageLength > 0 && <figure className="w-full flex flex-col h-full justify-center my-auto gap-2 items-center max-h-1/2">
           <div className="w-full h-96 max-w-lg object-contain mx-auto">
             <img
               src={details.imageUrl[curImage]}
@@ -73,7 +73,7 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
               </button>
             </div>
           )}
-        </figure>
+        </figure> }
       </div>
     </Modal>
   );

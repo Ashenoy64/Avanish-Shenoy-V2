@@ -1,11 +1,31 @@
 const _data = [
   {
+    imageUrl: ['/projects/MARD/mard.png', '/projects/MARD/mard_side.png'],
+    title: "MARD - Multi-Functional AI Robot",
+    description: `MARD (Multi-Functional AI Robot with Raspberry Pi 5 and OpenAI) is an exciting hardware project developed by Monish, Avanish, Ramesh, and Druva. 
+        This project utilizes a Raspberry Pi 5, an L298 motor driver, and the power of OpenAI to create an intelligent robot that can interact with users through speech, movement, and remote control.
+         With the ability to process voice commands and provide responses, MARD offers an engaging and interactive experience.`,
+    githubLink: "https://github.com/Ashenoy64/MARD",
+    fields: ["IOT", "AI", "RaspberryPI", "Motor Driver"],
+    pinned: true,
+  },
+  {
     imageUrl: ['/projects/Kannon/CreateTest.png', '/projects/Kannon/NodeHealth.png', '/projects/Kannon/TestView.png', '/projects/Kannon/RealTimeTest.png', '/projects/Kannon/TestSummary.png'],
     title: "Kannon-1000:Distributed Load Testing System",
     description: `Kannon-1000 is a distributed load testing system designed for scalability and real-time monitoring.
      It allows users to perform tsunami and avalanche tests, view test statuses, and manage test creation through a Streamlit-powered interface.`,
     githubLink: "https://github.com/Ashenoy64/Kannon-1000",
     fields: ["Kafka", "Streamlit", "Python"],
+    pinned: true,
+  },
+  {
+    imageUrl: [],
+    title: "Genric AI Game Engine",
+    description: `A Prototype Game Engine that can run and simulate multiple sequentially played games like Tic Tac Toe , Connect4 , etc.
+    This utilizes a modified version of Monte Carlo Tree Search for the artificial intelligence baked in The game engine, this is designed to be completely modular and highly generic for extensive Modifications and CROSS IMPORTS.
+    The AI is capable of playing any game that the game engine can run`,
+    githubLink: "https://github.com/Ashenoy64/Generic-AI-Game-Engine",
+    fields: ["C++", "TreeSearch"],
     pinned: true,
   },
   {
@@ -27,18 +47,9 @@ const _data = [
         With FileStorage, you can easily upload files to the server and download them whenever needed.`,
     githubLink: "https://github.com/Ashenoy64/File-Storage.git",
     fields: ["Python", "Streamlit", "Sockets"],
-    pinned: true,
+    pinned: false,
   },
-  {
-    imageUrl: ['/projects/MARD/mard.png', '/projects/MARD/mard_side.png'],
-    title: "MARD - Multi-Functional AI Robot",
-    description: `MARD (Multi-Functional AI Robot with Raspberry Pi 5 and OpenAI) is an exciting hardware project developed by Monish, Avanish, Ramesh, and Druva. 
-        This project utilizes a Raspberry Pi 5, an L298 motor driver, and the power of OpenAI to create an intelligent robot that can interact with users through speech, movement, and remote control.
-         With the ability to process voice commands and provide responses, MARD offers an engaging and interactive experience.`,
-    githubLink: "https://github.com/Ashenoy64/MARD",
-    fields: ["IOT", "AI", "RaspberryPI", "Motor Driver"],
-    pinned: true,
-  },
+  
   {
     imageUrl: ['/projects/IndustryRun/home.png', '/projects/IndustryRun/play.png'],
     title: "Industry Run",
