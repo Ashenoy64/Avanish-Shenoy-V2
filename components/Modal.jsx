@@ -3,9 +3,9 @@ import React, { useState } from "react";
 
 export function Modal({ children }) {
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
+    <div className="fixed inset-0 flex flex-col w-screen h-screen items-center justify-center z-50">
       <div className=" backdrop-blur-md  absolute inset-0"></div>
-      <div className="p-6 last:rounded-lg  z-10 relative">
+      <div className="p-6 last:rounded-lg  z-10 relative ">
         <div className="flex flex-col text-center ">{children}</div>
       </div>
     </div>
@@ -26,8 +26,8 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
 
   return (
     <Modal>
-      <div className="flex flex-col-reverse rounded-md justify-between  items-center md:card-side bg-base-100 shadow-xl p-2">
-        <div className="card-body max-w-lg max-h-1/2">
+      <div className="flex flex-col-reverse rounded-md justify-between h-5/6 md:h-full    items-center md:card-side bg-base-100 shadow-xl p-2">
+        <div className="card-body max-w-lg  h-96 md:h-full overflow-y-auto no-scrollbar">
           <h2 className="card-title">{details.title}</h2>
           <div className="text-justify  overflow-y-auto no-scrollbar">
             {details.description}
@@ -54,7 +54,7 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
             </button>
           </div>
         </div>
-        {imageLength > 0 && <figure className="w-full flex flex-col h-full justify-center my-auto gap-2 items-center max-h-1/2">
+        {imageLength > 0 && <figure className="w-full flex flex-col h-96 md:h-full justify-center my-auto gap-2 items-center max-h-1/2">
           <div className="w-full h-96 max-w-lg object-contain mx-auto">
             <img
               src={details.imageUrl[curImage]}
