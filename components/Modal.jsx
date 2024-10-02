@@ -26,10 +26,10 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
 
   return (
     <Modal>
-      <div className="flex flex-col-reverse rounded-md justify-between h-full w-full md:h-full    items-center md:card-side bg-base-100 shadow-xl p-2">
-        <div className="card-body max-w-lg  h-96 md:h-full overflow-y-auto no-scrollbar">
+      <div className="flex flex-col-reverse rounded-md justify-between h-full w-full md:h-full items-center md:card-side bg-base-100 shadow-xl p-2">
+        <div className="flex flex-col p-4 justify-evenly my-8 max-w-lg  h-full md:h-full overflow-y-auto no-scrollbar">
           <h2 className="card-title">{details.title}</h2>
-          <div className="text-justify  overflow-y-auto no-scrollbar h-full">
+          <div className="text-justify  overflow-y-auto no-scrollbar h-full w-full">
             {details.description}
           </div>
           <div className="flex flex-wrap mb-4 p-3 ">
@@ -42,7 +42,7 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
               </span>
             ))}
           </div>
-          <div className="flex flex-col items-end pb-10">
+          <div className="flex flex-col items-end sm:pb-auto">
             <button
               className="btn  btn-outline btn-warning"
               onClick={() => {
