@@ -6,7 +6,7 @@ export function Modal({ children }) {
     <div className="fixed inset-0 flex flex-col w-screen h-screen items-center justify-center z-50">
       <div className=" backdrop-blur-md  absolute inset-0"></div>
       <div className="p-6 last:rounded-lg  z-10 relative ">
-        <div className="flex flex-col text-center ">{children}</div>
+        <div className="flex flex-col text-center h-screen w-screen sm:w-auto sm:h-auto ">{children}</div>
       </div>
     </div>
   );
@@ -26,10 +26,10 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
 
   return (
     <Modal>
-      <div className="flex flex-col-reverse rounded-md justify-between h-5/6 md:h-full    items-center md:card-side bg-base-100 shadow-xl p-2">
+      <div className="flex flex-col-reverse rounded-md justify-between h-full w-full md:h-full    items-center md:card-side bg-base-100 shadow-xl p-2">
         <div className="card-body max-w-lg  h-96 md:h-full overflow-y-auto no-scrollbar">
           <h2 className="card-title">{details.title}</h2>
-          <div className="text-justify  overflow-y-auto no-scrollbar">
+          <div className="text-justify  overflow-y-auto no-scrollbar h-full">
             {details.description}
           </div>
           <div className="flex flex-wrap mb-4 p-3 ">
@@ -42,14 +42,13 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
               </span>
             ))}
           </div>
-          <div className="card-actions justify-end">
+          <div className="flex flex-col items-end pb-10">
             <button
               className="btn  btn-outline btn-warning"
               onClick={() => {
                 CloseHandler();
               }}
             >
-              {" "}
               Close{" "}
             </button>
           </div>
@@ -65,10 +64,10 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
           {imageLength > 1 && (
             <div className="flex flex-row  w-full justify-evenly gap-4">
              
-              <button type="btn btn-primary btn-md " onClick={prev}>
+              <button className="cursor-pointer p-1 " onClick={prev}>
                 {"Prev"}
               </button>
-              <button type="btn btn-primary btn-md   " onClick={next}>
+              <button className="cursor-pointer p-1 " onClick={next}>
                 {"Next"}
               </button>
             </div>
