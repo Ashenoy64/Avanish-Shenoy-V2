@@ -36,7 +36,7 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
             {details.fields.map((field) => (
               <span
                 key={field}
-                className="bg-blue-500 text-white text-xs rounded-full px-2 py-1 mr-2 mb-2"
+                className="border border-blue-500 text-white text-xs rounded-full px-2 py-1 mr-2 mb-2"
               >
                 {field}
               </span>

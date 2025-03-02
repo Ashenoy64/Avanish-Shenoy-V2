@@ -32,7 +32,7 @@ export default function ProjectCard({ project,style,click }) {
           
           <div className="mt-2 mb-4 flex flex-wrap">
             {project.fields.map((field) => (
-              <span key={field} className="bg-blue-500 text-white text-xs rounded-full px-2 py-1 mr-2 mb-2">
+              <span key={field} className="border-blue-500 border text-white text-xs rounded-full px-2 py-1 mr-2 mb-2">
                 {field}
               </span>
             ))}

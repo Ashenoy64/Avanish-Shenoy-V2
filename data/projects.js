@@ -2,18 +2,19 @@ const _data = [
   {
     imageUrl: ['/projects/MARD/mard.png', '/projects/MARD/mard_side.png'],
     title: "MARD - Multi-Functional AI Robot",
-    description: `MARD (Multi-Functional AI Robot with Raspberry Pi 5 and OpenAI) is an exciting hardware project developed by Monish, Avanish, Ramesh, and Druva. 
-        This project utilizes a Raspberry Pi 5, an L298 motor driver, and the power of OpenAI to create an intelligent robot that can interact with users through speech, movement, and remote control.
-         With the ability to process voice commands and provide responses, MARD offers an engaging and interactive experience.`,
+    description: `MARD (Multi-Functional AI Robot) is an innovative hardware project built using a Raspberry Pi 5, L298 motor driver, and OpenAI’s AI capabilities.
+    Designed for seamless interaction, MARD responds to voice commands, moves autonomously, and can be controlled remotely.
+    By combining speech recognition and intelligent automation, it provides an engaging and interactive user experience.`,
     githubLink: "https://github.com/Ashenoy64/MARD",
     fields: ["IOT", "AI", "RaspberryPI", "Motor Driver"],
     pinned: true,
   },
   {
-    imageUrl: ['/projects/Kannon/CreateTest.png', '/projects/Kannon/NodeHealth.png', '/projects/Kannon/TestView.png', '/projects/Kannon/RealTimeTest.png', '/projects/Kannon/TestSummary.png'],
+    imageUrl: ['/projects/Kannon/CreateTest.png', '/projects/Kannon/NodeHealth.png', '/projects/Kannon/RealTimeTest.png'],
     title: "Kannon-1000:Distributed Load Testing System",
-    description: `Kannon-1000 is a distributed load testing system designed for scalability and real-time monitoring.
-     It allows users to perform tsunami and avalanche tests, view test statuses, and manage test creation through a Streamlit-powered interface.`,
+    description: `Kannon-1000 is a distributed load testing system built for scalability and real-time test monitoring.
+    It enables users to conduct tsunami and avalanche tests while providing live status updates and performance insights.
+    With a Streamlit-powered interface, users can efficiently create, manage, and track load tests in real time.`,
     githubLink: "https://github.com/Ashenoy64/Kannon-1000",
     fields: ["Kafka", "Streamlit", "Python"],
     pinned: true,
@@ -40,11 +41,10 @@ const _data = [
     pinned: true,
   },
   {
-    imageUrl: ['/projects/FileStorage/home.png', '/projects/FileStorage/dashboard.png', '/projects/FileStorage/download.png', '/projects/FileStorage/final.png'],
+    imageUrl: [ '/projects/FileStorage/dashboard.png', '/projects/FileStorage/download.png', '/projects/FileStorage/final.png'],
     title: "File Storage",
-    description: `This project is FileStorage, a simple and efficient web application built with Python, Streamlit, and Sockets.
-        It empowers multiple users to upload and download files concurrently. 
-        With FileStorage, you can easily upload files to the server and download them whenever needed.`,
+    description: `FileStorage is a lightweight and efficient web application built with Python, Streamlit, and Sockets. It enables multiple users to upload and download files simultaneously, 
+    making file sharing seamless. Additionally, FileStorage allows users to turn their remote machines into storage devices, providing easy access to storage from anywhere.`,
     githubLink: "https://github.com/Ashenoy64/File-Storage.git",
     fields: ["Python", "Streamlit", "Sockets"],
     pinned: false,
@@ -53,15 +53,14 @@ const _data = [
   {
     imageUrl: ['/projects/IndustryRun/home.png', '/projects/IndustryRun/play.png'],
     title: "Industry Run",
-    description: `Industry Run is an exciting endless runner game developed using Unreal Engine 5.
-        This game is a result of applying the knowledge gained from a comprehensive course on Unreal Engine 5 available on YouTube .
-        The course covered various aspects of game development, and at the end of the tutorial, Industry Run was created as a bonus project to showcase the skills and concepts learned throughout the course.`,
+    description: `Industry Run is a fast-paced endless runner game developed using Unreal Engine 5 as part of a learning project.
+    Built to explore game development concepts, it features immersive visuals, smooth mechanics, and an industrial-themed environment where players navigate obstacles in an ever-evolving world.`,
     githubLink: "https://github.com/Ashenoy64/IndustryRun",
     fields: ["Unreal", "Blender"],
     pinned: true,
   },
   {
-    imageUrl: ['/projects/Trackit/Home.png', '/projects/Trackit/dashboard.png'],
+    imageUrl: ['/projects/Trackit/dashboard.png'],
     title: "TrackIt-Stock Price Prediction Website",
     description: `TrackIt is a web application designed to provide stock price predictions.
         Built using React, Express, and MongoDB, this project offers users insights into potential stock price trends.`,
@@ -70,11 +69,11 @@ const _data = [
     pinned: true,
   },
   {
-    imageUrl: ['/projects/BankingSystem/Home.png', '/projects/BankingSystem/Registration.png', '/projects/BankingSystem/Transfer.png'],
+    imageUrl: [],
     title: "Golden Horizon Bank",
-    description: `Golden Horizon Bank (GHB) is a simple Banking System website developed with Django and Supabase as the database.
-      It was created as part of a 1st-semester Python project. The website enables users to create accounts, log in, and perform basic banking operations, including transferring points to other accounts using the receiver's ID and name.
-       Additionally, users can change their passwords and edit their profiles once logged in.`,
+    description: `Golden Horizon Bank (GHB) is a simple banking system website built with Django and Supabase as the database.
+    It allows users to create accounts, log in, and perform basic banking operations, such as transferring points to other accounts using the receiver's ID and name.
+    Additionally, users can update their profiles and change passwords for account security`,
     githubLink: "https://github.com/Ashenoy64/Banking-System",
     fields: ["Django", "Python", "Postgres", "Supabase", "HTML", "CSS"],
     pinned: false,
@@ -82,8 +81,8 @@ const _data = [
   {
     imageUrl: ['/projects/FaceDetection/home.png', '/projects/FaceDetection/result.png'],
     title: "Face Detection",
-    description: `This project is a Python Flask-based web application that allows you to upload a video, 
-        inspect the frames for detected faces.`,
+    description: `This Flask-based web app lets you upload a video and extract faces from a specific time frame.
+    Just select a timestamp, and it will detect and collect faces from that frame.`,
     githubLink: "https://github.com/Ashenoy64/FaceDetection-Flask",
     fields: ["FaceDetection", "Flask", "Python"],
     pinned: false,
@@ -98,7 +97,7 @@ const _data = [
     pinned: false,
   },
   {
-    imageUrl: ['/projects/CollabTE/Login.png', '/projects/CollabTE/Dashboard.png', '/projects/CollabTE/Offline.png', '/projects/CollabTE/Online.png'],
+    imageUrl: ['/projects/CollabTE/Login.png', '/projects/CollabTE/Online.png'],
     title: "CollabTE",
     description: `CollabTE is a collaborative text editor built using TipTap, offering a seamless platform for multiple users to collaboratively edit text files. 
         The editor utilizes Firebase for basic file system functionality, enabling offline editing capabilities along with a room-based collaborative environment. 
@@ -110,13 +109,13 @@ const _data = [
   {
     imageUrl: ['/projects/HPMP/Login.png', '/projects/HPMP/Home.png', '/projects/HPMP/Playlist.png', '/projects/HPMP/Search.png'],
     title: "HPMP",
-    description: `HPMP is a music player application! This web application aims to provide you with a fast and enjoyable music listening experience.`,
+    description: `HPMP is a music player application! This web application tries to provide you with a fast and enjoyable music listening experience.`,
     githubLink: "https://github.com/Ashenoy64/HPMP",
     fields: ["Vercel", "Nextjs", 'MongoDB', 'Mysql'],
     pinned: false,
   },
   {
-    imageUrl: ['/projects/Inventory/AdminDashboard.png', '/projects/Inventory/AdminOrders.png', '/projects/Inventory/AdminProducts.png', '/projects/Inventory/Buy.png', '/projects/Inventory/Cart.png', '/projects/Inventory/NodeHealth.png', '/projects/Inventory/OrderStatus.png'],
+    imageUrl: ['/projects/Inventory/AdminDashboard.png', '/projects/Inventory/AdminOrders.png', '/projects/Inventory/AdminProducts.png', '/projects/Inventory/OrderStatus.png'],
     title: "Inventory Management System",
     description: `The Inventory Management System is a comprehensive solution designed to streamline inventory operations,
          order processing, and administrative tasks. Leveraging various technologies, including RabbitMQ for communication, Next.js for 
