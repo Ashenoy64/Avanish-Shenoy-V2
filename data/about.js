@@ -1,31 +1,28 @@
 const _data =  [
     {
         title:"Web Development",
-        description:"Backend and occasional frontend developer. Crafting robust\
-        server-side apps and seamless user experiences. Web development\
-        ignites my passion for logic and creativity in the ever-evolving\
-        tech world." ,
+        description:"Backend developer who sometimes dabbles in the frontend.  \
+        I enjoy building reliable server-side applications and making things work behind the scenes.\
+        Web development keeps me engaged—it’s a space where logic meets creativity, and there’s always something new to learn." ,
         url:"/gifs/webdev/webdev_g.gif"
     },
     {
         title:"Game Development",
-        description:"Game developer, crafting captivating gameplay mechanics and\
-        stunning visuals. I embrace challenges, pushing boundaries in game\
-        development, from casual to grand adventures.",
+        description:"Game developer who enjoys crafting engaging gameplay mechanics.\
+        I like tackling challenges and exploring different ideas, whether in small projects or bigger adventures.\
+        I've made a few games, and from that, I know one thing—I really enjoy game development.",
         url:"/gifs/gamedev/gamedev_g.gif"
     },
     {
         title:"Systems",
-        description:`Fascinated by systems and automation, I thrive on solving complex problems and optimizing workflows.
-         With a strong foundation in system integration, I am eager to contribute to cutting-edge tech solutions and dynamic problem-solving.`,
+        description:`I’m fascinated by system design—the way different technologies come together to build reliable, scalable, and efficient systems.\
+        Understanding the thought process behind how things are structured and the work that goes into making them function keeps me hooked.`,
         url:"/gifs/systems/systems.gif"
     },
     {
-        title:"Competitive Coding and Beyond",
-        description:"Competitive coding enthusiast. Sharpening problem-solving skills\
-        with intricate algorithms and data structures. Avid anime watcher\
-        and passionate gamer, embracing diverse worlds of tech and\
-        entertainment.",
+        title:"Programming",
+        description:"I enjoy using code to bring ideas to life, whether it’s exploring algorithms, automating tasks, or just building something for fun.\
+        Programming is more than a skill for me—it’s how I think and solve problems.",
         url:"/gifs/programming/programming_g.gif"
     }
 ]
