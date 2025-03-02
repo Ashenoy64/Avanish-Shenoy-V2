@@ -16,11 +16,11 @@ const Navbar = () => {
       <div className="  flex flex-row justify-between px-12 py-2">
         <div className="">
           <a href="/">
-          <div className="text-4xl font-bold logo animate-glow">AS</div>
+          <div className="text-3xl font-bold logo animate-glow">AS</div>
           </a>
         </div>
 
-        <div className="hidden md:flex space-x-6 text-xl">
+        <div className="hidden md:flex space-x-6 text-md">
           <a href="/#home" className="animate-glow">
             Home
           </a>

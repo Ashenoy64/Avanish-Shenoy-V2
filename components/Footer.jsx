@@ -3,34 +3,34 @@ import Image from "next/image";
 
 export default function Footer (){
   return (
-    <footer className="bg-gray-900 text-gray-300 py-8 " >
-      <div className="container w-full px-4 flex flex-wrap items-center justify-evenly">
+    <footer className="bg-gray-900 text-gray-300 py-4 " >
+      <div className="container w-full px-4  flex flex-wrap items-center justify-evenly">
         <nav className="flex flex-wrap justify-center gap-10 md:gap-16 w-full ">
           <a
             href="/#home"
-            className="text-lg text-gray-300 hover:text-white mr-4"
+            className="text-sm text-gray-300 hover:text-white mr-4"
           >
             Home
           </a>
           <a
             href="/projects"
-            className="text-lg text-gray-300 hover:text-white mr-4"
+            className="text-sm text-gray-300 hover:text-white mr-4"
           >
             Projects
           </a>
           <a
             href="/awards"
-            className="text-lg text-gray-300 hover:text-white mr-4"
+            className="text-sm text-gray-300 hover:text-white mr-4"
           >
             Awards
           </a>
           <a
             href="/contact"
-            className="text-lg text-gray-300 hover:text-white mr-4"
+            className="text-sm text-gray-300 hover:text-white mr-4"
           >
             Contact
           </a>
-          <a href='/Avanish_Shenoy.pdf' target="__blank" className="text-lg text-gray-300 hover:text-white mr-4">
+          <a href='/Avanish_Shenoy.pdf' target="__blank" className="text-sm text-gray-300 hover:text-white mr-4">
             CV
           </a>
         </nav>
@@ -43,7 +43,7 @@ export default function Footer (){
             rel="noopener noreferrer"
             className="mr-3 md:mr-4"
           >
-            <Image src="/icons/github.png" alt="GitHub" className="md:w-8 md:h-8 h-6 w-6" width={24} height={24} />
+            <Image src="/icons/github.png" alt="GitHub" className="md:w-6 md:h-6 h-6 w-6" width={12} height={12} />
           </a>
 
           <a
@@ -52,7 +52,7 @@ export default function Footer (){
             rel="noopener noreferrer"
             className="mr-3 md:mr-4"
           >
-            <Image src="/icons/insta.png" alt="Instagram" className="md:w-8 md:h-8 h-6 w-6" width={24} height={24} />
+            <Image src="/icons/insta.png" alt="Instagram" className="md:w-6 md:h-6 h-6 w-6" width={12} height={12} />
           </a>
 
           <a
@@ -61,14 +61,14 @@ export default function Footer (){
             rel="noopener noreferrer"
             className="mr-3 md:mr-4"
           >
-            <Image src="/icons/linkedin.png" alt="LinkedIn" className="md:w-8 md:h-8 h-6 w-6" width={24} height={24} />
+            <Image src="/icons/linkedin.png" alt="LinkedIn" className="md:w-6 md:h-6 h-6 w-6" width={12} height={12} />
           </a>
 
           <a href="mailto:ashenoy64@gmail.com">
-            <Image src="/icons/gmail.png" alt="Gmail" className="md:w-8 md:h-8 h-6 w-6" width={24} height={24} />
+            <Image src="/icons/gmail.png" alt="Gmail" className="md:w-6 md:h-6 h-6 w-6" width={12} height={12} />
           </a>
         </div>
-        <div className="text-lg tracking-widest w-full mt-12">
+        <div className="text-xs tracking-widest w-full mt-4">
           © {new Date().getFullYear()} Avanish Shenoy. All rights reserved.
         </div>
       </div>
