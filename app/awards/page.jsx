@@ -123,7 +123,7 @@ export default function Page() {
   const totalItems = activeTab === "certificates" ? CertificateData.length : BadgesData.length;
 
   return (
-    <div className="container mx-auto px-4 py-8 min-h-screen">
+    <div className="container mx-auto my-16 px-4 py-8 min-h-screen">
       {/* Header Section */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold mb-2">Achievements</h1>
@@ -222,7 +222,7 @@ export default function Page() {
             )}{" "}
             of {totalItems} {activeTab}
           </div>
-          <div className="join">
+          <div className="join gap-1">
             <button
               onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
               disabled={currentPage === 1}
