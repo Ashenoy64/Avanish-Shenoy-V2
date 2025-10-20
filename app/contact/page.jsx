@@ -83,7 +83,7 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="flex justify-center items-center h-screen  my-16">
+    <section className="flex justify-center items-center h-screen  my-6">
       {notificationState != 0 && (
         <div className="toast toast-start z-10">
           {(notificationState == 1 && (
