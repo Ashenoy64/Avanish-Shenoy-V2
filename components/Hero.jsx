@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
         
         {/* Subtitle - Updated with better styling */}
-        <p className="text-base sm:text-lg md:text-xl text-base-content/70 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
+        <p className="text-white sm:text-lg md:text-xl text-base-content/70 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
           Recent graduate with{" "}
           <span className="text-primary font-semibold">Systems and Core Computing</span> specialization.
           Building projects in{" "}

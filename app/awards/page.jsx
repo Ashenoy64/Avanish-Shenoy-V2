@@ -126,8 +126,8 @@ export default function Page() {
     <div className="container mx-auto my-16 px-4 py-8 min-h-screen">
       {/* Header Section */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold mb-2">Achievements</h1>
-        <p className="text-base-content/70">
+        <h1 className="text-4xl font-bold mb-2 text-primary">Achievements</h1>
+        <p className="text-white">
           A collection of badges and certifications earned through continuous learning
         </p>
       </div>

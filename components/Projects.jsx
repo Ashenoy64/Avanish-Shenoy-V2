@@ -22,8 +22,8 @@ export default function Projects() {
     <div id="projects" className="container mx-auto px-4 py-16 lg:py-24">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-        <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bold mb-4 text-primary">Featured Projects</h2>
+        <p className="text-lg text-white max-w-2xl mx-auto">
           Highlighting my best work in web development, AI, game development,
           and systems programming
         </p>

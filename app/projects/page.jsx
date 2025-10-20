@@ -32,8 +32,8 @@ export default function Projects() {
     <div className="container mx-auto my-16 px-4 py-12 min-h-screen">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold mb-4">Projects</h1>
-        <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
+        <h1 className="text-5xl font-bold mb-4 text-primary">Projects</h1>
+        <p className="text-lg text-white max-w-2xl mx-auto">
           A showcase of my work spanning web development, game development, AI,
           and systems programming
         </p>
