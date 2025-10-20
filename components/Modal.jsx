@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from 'next/image';
 
 export function Modal({ children }) {
   // Prevent body scroll when modal is open
@@ -82,12 +83,17 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
           {/* Image Carousel */}
           {hasImages && (
             <div className="lg:w-1/2 w-full bg-base-200 flex flex-col flex-shrink-0">
-              <div className="relative flex items-center justify-center p-4 sm:p-6 min-h-[250px] sm:min-h-[300px] lg:min-h-0">
-                <img
-                  src={details.imageUrl[currentImageIndex]}
-                  alt={`Project screenshot ${currentImageIndex + 1}`}
-                  className="max-h-[300px] sm:max-h-[400px] lg:max-h-96 w-full object-contain rounded-lg"
-                />
+              <div className="relative flex items-center justify-center p-4 sm:p-6 min-h-[250px] sm:min-h-[300px] lg:min-h-[400px]">
+                <div className="relative w-full h-[300px] sm:h-[400px] lg:h-96">
+                  <Image
+                    src={details.imageUrl[currentImageIndex]}
+                    alt={`Project screenshot ${currentImageIndex + 1}`}
+                    fill
+                    className="rounded-lg object-contain"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={currentImageIndex === 0}
+                  />
+                </div>
 
                 {details.imageUrl.length > 1 && (
                   <>
@@ -122,16 +128,18 @@ export const ProjectViewer = ({ CloseHandler, details }) => {
                     <button
                       key={idx}
                       onClick={() => setCurrentImageIndex(idx)}
-                      className={`flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                      className={`flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 transition-all relative ${
                         idx === currentImageIndex
                           ? "border-primary scale-110"
                           : "border-transparent opacity-60 hover:opacity-100"
                       }`}
                     >
-                      <img
+                      <Image
                         src={url}
                         alt={`Thumbnail ${idx + 1}`}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="80px"
                       />
                     </button>
                   ))}

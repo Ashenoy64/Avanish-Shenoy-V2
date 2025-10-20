@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from 'next/image';
 
 export default function ProjectCard({ project, click }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,13 +25,16 @@ export default function ProjectCard({ project, click }) {
       <figure className="relative h-40 sm:h-48 bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
         {hasImages ? (
           <>
-            <img
+            <Image
               src={project.imageUrl[currentIndex]}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-110"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              priority={currentIndex === 0}
             />
             {project.imageUrl.length > 1 && (
-              <div className="absolute bottom-2 right-2 flex gap-1">
+              <div className="absolute bottom-2 right-2 flex gap-1 z-10">
                 {project.imageUrl.map((_, idx) => (
                   <div
                     key={idx}
@@ -61,7 +65,7 @@ export default function ProjectCard({ project, click }) {
           </div>
         )}
         {project.pinned && (
-          <div className="badge badge-secondary badge-sm absolute top-2 left-2 gap-1">
+          <div className="badge badge-secondary badge-sm absolute top-2 left-2 gap-1 z-10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-3 w-3"
